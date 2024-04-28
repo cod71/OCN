@@ -1,0 +1,25 @@
+import math
+
+# Given refractive indices
+mu1 = 1.50
+mu2 = 1.47
+
+# Calculate the critical angle in radians
+critical_angle_rad = math.asin(mu2 / mu1)
+
+# Convert the critical angle to degrees
+critical_angle_deg = math.degrees(critical_angle_rad)
+
+# Calculate the numerical aperture (NA)
+NA = math.sqrt(mu1*2 - mu2*2)
+
+# Calculate the acceptance angle in radians
+acceptance_angle_rad = math.asin(NA)
+
+# Convert the acceptance angle to degrees
+acceptance_angle_deg = math.degrees(acceptance_angle_rad)
+
+# Print the results
+print("Critical Angle:", critical_angle_deg, "degrees")
+print("Numerical Aperture (NA):", NA)
+print("Acceptance Angle:", acceptance_angle_deg, "degrees")
